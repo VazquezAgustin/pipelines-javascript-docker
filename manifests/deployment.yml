@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vazquezagustinpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vazquezagustinpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: vazquezagustinpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: vazquezagustinpipelinesjavascriptdocker 
+          image: mycontainerregistryagav.azurecr.io/vazquezagustinpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
